@@ -2,11 +2,11 @@
   <nav class="navbar">
     <div class="nav-container">
       <router-link to="/" class="nav-brand">
-        Specksnyder Labs
+        <img src="../assets/images/specksnyder_logo_v2.jpg" alt="Specksnyder Labs" class="nav-logo">
       </router-link>
       <div class="nav-links">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/about" class="nav-link">About</router-link>
+        <!-- <router-link to="/" class="nav-link">Home</router-link> -->
+        <!-- <router-link to="/about" class="nav-link">About</router-link> -->
       </div>
     </div>
   </nav>
@@ -41,10 +41,20 @@ export default {
 }
 
 .nav-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
   text-decoration: none;
-  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
 }
 
 .nav-links {
